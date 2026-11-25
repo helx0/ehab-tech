@@ -1,0 +1,39 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#102a38"/><stop offset="1" stop-color="#101a24"/></linearGradient>
+    <radialGradient id="glow"><stop stop-color="#42d6a4" stop-opacity=".42"/><stop offset="1" stop-color="#42d6a4" stop-opacity="0"/></radialGradient>
+    <linearGradient id="bar" x1="0" y1="1" x2="0" y2="0"><stop stop-color="#42d6a4" stop-opacity=".2"/><stop offset="1" stop-color="#42d6a4"/></linearGradient>
+  </defs>
+  <rect width="800" height="500" fill="url(#bg)"/>
+  <circle cx="660" cy="90" r="250" fill="url(#glow)"/>
+  <g opacity=".15" stroke="#fff"><path d="M0 100h800M0 200h800M0 300h800M0 400h800M100 0v500M200 0v500M300 0v500M400 0v500M500 0v500M600 0v500M700 0v500"/></g>
+  <rect x="56" y="54" width="688" height="392" rx="18" fill="#0c1620" stroke="#ffffff" stroke-opacity=".16"/>
+  <rect x="56" y="54" width="148" height="392" rx="18" fill="#111f2b"/>
+  <text x="82" y="94" fill="#42d6a4" font-family="Arial,sans-serif" font-size="16" font-weight="800">EHAB OS</text>
+  <g fill="#ffffff" opacity=".45">
+    <rect x="82" y="124" width="96" height="9" rx="4"/><rect x="82" y="154" width="76" height="9" rx="4"/>
+    <rect x="82" y="184" width="88" height="9" rx="4"/><rect x="82" y="214" width="68" height="9" rx="4"/>
+  </g>
+  <rect x="82" y="124" width="96" height="9" rx="4" fill="#42d6a4"/>
+  <text x="232" y="92" fill="#eaf6f0" font-family="Arial,sans-serif" font-size="19" font-weight="700">Overview</text>
+  <g transform="translate(232 116)">
+    <rect width="152" height="84" rx="12" fill="#ffffff" opacity=".07"/><rect x="168" width="152" height="84" rx="12" fill="#ffffff" opacity=".07"/><rect x="336" width="152" height="84" rx="12" fill="#ffffff" opacity=".07"/>
+    <text x="16" y="28" fill="#9fb8ad" font-family="Arial,sans-serif" font-size="12">Revenue</text>
+    <text x="16" y="62" fill="#ffffff" font-family="Arial,sans-serif" font-size="26" font-weight="800">$13.7k</text>
+    <text x="184" y="28" fill="#9fb8ad" font-family="Arial,sans-serif" font-size="12">Orders</text>
+    <text x="184" y="62" fill="#ffffff" font-family="Arial,sans-serif" font-size="26" font-weight="800">15</text>
+    <text x="352" y="28" fill="#9fb8ad" font-family="Arial,sans-serif" font-size="12">Stock alerts</text>
+    <text x="352" y="62" fill="#42d6a4" font-family="Arial,sans-serif" font-size="26" font-weight="800">3</text>
+  </g>
+  <g transform="translate(232 226)">
+    <rect width="488" height="196" rx="14" fill="#ffffff" opacity=".05"/>
+    <text x="20" y="32" fill="#eaf6f0" font-family="Arial,sans-serif" font-size="15" font-weight="700">Weekly performance</text>
+    <g transform="translate(24 60)">
+      <rect x="0" y="70" width="44" height="70" rx="6" fill="url(#bar)"/><rect x="64" y="46" width="44" height="94" rx="6" fill="url(#bar)"/>
+      <rect x="128" y="24" width="44" height="116" rx="6" fill="url(#bar)"/><rect x="192" y="56" width="44" height="84" rx="6" fill="url(#bar)"/>
+      <rect x="256" y="34" width="44" height="106" rx="6" fill="url(#bar)"/><rect x="320" y="10" width="44" height="130" rx="6" fill="url(#bar)"/>
+      <rect x="384" y="42" width="44" height="98" rx="6" fill="url(#bar)"/>
+      <path d="M22 62 L86 38 L150 18 L214 48 L278 28 L342 8 L406 34" fill="none" stroke="#42d6a4" stroke-width="3" stroke-linecap="round"/>
+    </g>
+  </g>
+</svg>

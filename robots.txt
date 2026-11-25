@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://helx0.github.io/ehab-tech/sitemap.xml

@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630">
+  <rect width="1200" height="630" fill="#0c1f1a"/>
+  <circle cx="1050" cy="120" r="220" fill="#123a2b" opacity=".5"/>
+  <text x="90" y="270" fill="#39d98a" font-family="Arial,sans-serif" font-size="34" font-weight="700" letter-spacing="6">EHAB TECH</text>
+  <text x="90" y="370" fill="#ffffff" font-family="Arial,sans-serif" font-size="76" font-weight="800">Software. Systems. Automation.</text>
+  <text x="90" y="440" fill="#9fb8ad" font-family="Arial,sans-serif" font-size="34">Websites · Management systems · Python data pipelines</text>
+  <text x="90" y="540" fill="#39d98a" font-family="Arial,sans-serif" font-size="28">eng.ayhabtwfyq@gmail.com · +967 778 172 806</text>
+</svg>
