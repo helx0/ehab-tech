@@ -2,6 +2,8 @@
 
 موقع خدمات مطوّر مستقل — React 19 + TypeScript + Vite، جاهز للنشر، مع ثلاثة مشاريع ديمو حقيقية قابلة للتشغيل.
 
+**Live:** https://helx0.github.io/ehab-tech/
+
 ## بيانات التواصل (رسمية)
 
 - البريد: **eng.ayhabtwfyq@gmail.com**
