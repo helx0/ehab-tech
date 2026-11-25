@@ -1,7 +1,7 @@
 import { readFileSync, writeFileSync } from 'node:fs';
 
 const domain = process.argv[2];
-if (!domain || !/^https?:\/\/[^\s/]+$/.test(domain)) {
+if (!domain || !/^https?:\/\/[^\s"'<>]+$/.test(domain)) {
   console.error('Usage: node scripts/set-domain.mjs https://your-real-domain.com');
   process.exit(1);
 }
