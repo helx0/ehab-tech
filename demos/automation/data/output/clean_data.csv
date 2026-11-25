@@ -1,0 +1,9 @@
+branch,date,customer,product,qty,amount,source_file
+Shenzhen,2026-01-03,Shenzhen Tech Hub,Data Report Pack,5,1250.0,branch_shenzhen.csv
+Shanghai,2026-01-04,Shanghai Trade Co.,Business Website,1,1450.5,branch_shanghai.csv
+Sana'a,2026-01-05,Al-Nour Trading,Website,1,1200.0,branch_sanaa.csv
+Sana'a,2026-01-06,Li Wei,CRM System,2,3000.0,branch_sanaa.csv
+Shanghai,2026-01-07,Zhang Min,CRM System,1,1500.0,branch_shanghai.csv
+Sana'a,2026-01-09,Mona Al-Otaibi,Automation Sprint,3,1500.0,branch_sanaa.csv
+Shanghai,2026-01-10,Ningbo Export Ltd.,POS Dashboard,2,2400.0,branch_shanghai.csv
+Shenzhen,2026-01-12,Chen Hao,Business Website,1,1450.5,branch_shenzhen.csv

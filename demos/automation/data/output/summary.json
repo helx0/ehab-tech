@@ -1,0 +1,41 @@
+{
+  "generated_at": "2026-11-24T04:02:58",
+  "input_files": [
+    "branch_sanaa.csv",
+    "branch_shanghai.csv",
+    "branch_shenzhen.csv"
+  ],
+  "total_rows": 15,
+  "clean_rows": 8,
+  "anomaly_rows": 7,
+  "anomaly_rate": 0.4667,
+  "total_revenue": 13751.0,
+  "average_order": 1718.88,
+  "top_product": "CRM System",
+  "top_product_revenue": 4500.0,
+  "top_branch": "Sana'a",
+  "top_branch_revenue": 5700.0,
+  "daily_revenue": {
+    "2026-01-03": 1250.0,
+    "2026-01-04": 1450.5,
+    "2026-01-05": 1200.0,
+    "2026-01-06": 3000.0,
+    "2026-01-07": 1500.0,
+    "2026-01-09": 1500.0,
+    "2026-01-10": 2400.0,
+    "2026-01-12": 1450.5
+  },
+  "anomalies_by_reason": {
+    "duplicate": 3,
+    "invalid:amount": 1,
+    "invalid:qty": 2,
+    "missing:product": 1,
+    "negative:amount": 1
+  },
+  "output_files": [
+    "clean_data.csv",
+    "anomalies.csv",
+    "summary.json",
+    "report.md"
+  ]
+}

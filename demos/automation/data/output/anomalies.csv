@@ -1,0 +1,8 @@
+source_file,line,reason,branch,date,customer,product,qty,amount
+branch_sanaa.csv,4,duplicate,Sana'a,05/01/2026,Al-Nour Trading,Website,1,1200.00
+branch_sanaa.csv,5,invalid:amount|invalid:qty,Sana'a,2026-01-08,Broken Row,Website,,ABC
+branch_shanghai.csv,4,duplicate,Shanghai,2026-01-07,Zhang Min,CRM System,1,1500
+branch_shanghai.csv,6,invalid:qty,Shanghai,2026-01-11,Shanghai Trade Co.,Automation Sprint,-2,600
+branch_shenzhen.csv,3,duplicate,Shenzhen,03-01-2026,Shenzhen Tech Hub,Data Report Pack,5,1250
+branch_shenzhen.csv,5,missing:product,Shenzhen,2026-01-13,No Product,,1,900
+branch_shenzhen.csv,6,negative:amount,Shenzhen,2026-01-14,Chen Hao,CRM System,1,(1500)

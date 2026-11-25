@@ -1,0 +1,518 @@
+import type { Localized } from '../i18n/translations';
+import type { IconName } from '../components/Icon';
+
+const asset = (path: string) => `${import.meta.env.BASE_URL}${path}`;
+
+export type ServiceSlug = 'website' | 'systems' | 'automation';
+
+export interface Service {
+  slug: ServiceSlug;
+  icon: 'globe' | 'grid' | 'bolt';
+  tech: string[];
+  title: Localized<string>;
+  summary: Localized<string>;
+  problem: Localized<string>;
+  solution: Localized<string>;
+  features: Localized<string[]>;
+  deliverables: Localized<string[]>;
+  example: Localized<string>;
+}
+
+export const services: Service[] = [
+  {
+    slug: 'website',
+    icon: 'globe',
+    tech: ['React', 'TypeScript', 'Vite', 'Laravel', 'MySQL'],
+    title: {
+      en: 'Business Website Development',
+      ar: 'تطوير مواقع الأعمال',
+      zh: '企业网站开发',
+    },
+    summary: {
+      en: 'Professional, fast and multilingual websites that explain what you do and convert visitors into inquiries.',
+      ar: 'مواقع احترافية وسريعة ومتعددة اللغات تشرح ما تقدمه وتحوّل الزائر إلى طلب تواصل.',
+      zh: '专业、快速、多语言的网站，清楚展示业务并把访客转化为咨询。',
+    },
+    problem: {
+      en: 'Many businesses lose trust before a conversation starts: slow pages, unclear services, no portfolio and no way to request a quote.',
+      ar: 'تفقد الشركات ثقة العميل قبل بدء المحادثة: صفحات بطيئة، خدمات غير واضحة، لا يوجد معرض أعمال ولا طريقة لطلب عرض سعر.',
+      zh: '许多企业在沟通开始前就失去信任：页面缓慢、服务不清、没有案例，也没有询价入口。',
+    },
+    solution: {
+      en: 'I build a focused website with clear service pages, real project samples, multilingual content and a working project-request form.',
+      ar: 'أبني موقعاً مركّزاً بصفحات خدمات واضحة ونماذج أعمال حقيقية ومحتوى متعدد اللغات ونموذج طلب مشروع فعّال.',
+      zh: '我构建结构清晰的网站：明确的服务页、真实案例、多语言内容，以及可用的项目申请表单。',
+    },
+    features: {
+      en: [
+        'Responsive design for desktop, tablet and mobile',
+        'English, Arabic (RTL) and Chinese language switch',
+        'Fast loading and clean URL structure',
+        'Service pages with benefits, tech and pricing hints',
+        'Contact form with validation and clear success states',
+      ],
+      ar: [
+        'تصميم متجاوب مع الكمبيوتر والتابلت والجوال',
+        'تبديل لغات الإنجليزية والعربية (RTL) والصينية',
+        'تحميل سريع وروابط نظيفة',
+        'صفحات خدمات تحتوي المزايا والتقنيات وإرشادات الأسعار',
+        'نموذج تواصل مع تحقق ورسائل نجاح واضحة',
+      ],
+      zh: [
+        '适配桌面、平板和手机的响应式设计',
+        '英语、阿拉伯语（RTL）和中文切换',
+        '加载快速，URL 结构清晰',
+        '服务页包含优势、技术和价格提示',
+        '带验证和清晰成功提示的联系表单',
+      ],
+    },
+    deliverables: {
+      en: ['Source code', 'Responsive pages', 'Language files', 'Deployment guide', 'Handover documentation'],
+      ar: ['الكود المصدري', 'صفحات متجاوبة', 'ملفات اللغات', 'دليل النشر', 'وثائق التسليم'],
+      zh: ['源代码', '响应式页面', '语言文件', '部署指南', '交接文档'],
+    },
+    example: {
+      en: 'A Chinese distributor needs an English + Chinese site that explains three services and collects project requests by email.',
+      ar: 'يحتاج موزّع صيني إلى موقع بالإنجليزية والصينية يشرح ثلاث خدمات ويجمع طلبات المشاريع عبر البريد.',
+      zh: '一家中国经销商需要英文+中文网站，介绍三项服务并通过邮箱收集项目需求。',
+    },
+  },
+  {
+    slug: 'systems',
+    icon: 'grid',
+    tech: ['React', 'TypeScript', 'Laravel', 'REST API', 'MySQL'],
+    title: {
+      en: 'Business Management Systems',
+      ar: 'أنظمة إدارة الأعمال',
+      zh: '企业管理系统',
+    },
+    summary: {
+      en: 'Custom CRM, inventory, sales and reporting systems that replace spreadsheets and scattered messages.',
+      ar: 'أنظمة CRM ومخزون ومبيعات وتقارير مخصّصة تحل محل الجداول والرسائل المتفرقة.',
+      zh: '定制的 CRM、库存、销售和报表系统，取代表格和零散的聊天记录。',
+    },
+    problem: {
+      en: 'Orders live in chat messages, stock is tracked in Excel, and nobody knows the real numbers until the end of the month.',
+      ar: 'الطلبات في رسائل المحادثات، والمخزون في Excel، ولا أحد يعرف الأرقام الحقيقية حتى نهاية الشهر.',
+      zh: '订单散落在聊天记录里，库存靠 Excel 记录，到了月底没人知道真实数字。',
+    },
+    solution: {
+      en: 'I design the data model first, then build a role-based web app with forms, lists, dashboards and permissions your team can use daily.',
+      ar: 'أبدأ بتصميم نموذج البيانات، ثم أبني تطبيق ويب بالصلاحيات والنماذج والقوائم واللوحات التي يستخدمها الفريق يومياً.',
+      zh: '先设计数据模型，再构建带权限、表单、列表和仪表盘的 Web 应用，让团队每天都能用。',
+    },
+    features: {
+      en: [
+        'Customers, suppliers, products and orders in one place',
+        'Role-based access for admin, sales and warehouse',
+        'Live dashboards and exportable reports',
+        'Audit trail for sensitive changes',
+        'REST API ready for future mobile apps',
+      ],
+      ar: [
+        'العملاء والموردون والمنتجات والطلبات في مكان واحد',
+        'صلاحيات للمدير والمبيعات والمستودع',
+        'لوحات حيّة وتقارير قابلة للتصدير',
+        'سجل تدقيق للتغييرات الحساسة',
+        'واجهة REST API جاهزة لتطبيقات الجوال لاحقاً',
+      ],
+      zh: [
+        '客户、供应商、产品和订单集中管理',
+        '管理员、销售和仓库的权限分级',
+        '实时仪表盘和可导出报表',
+        '敏感变更的审计记录',
+        '预留 REST API，方便未来接入手机应用',
+      ],
+    },
+    deliverables: {
+      en: ['Database schema', 'Backend API', 'Admin interface', 'User guide', 'Test report'],
+      ar: ['مخطط قاعدة البيانات', 'واجهة خلفية API', 'لوحة إدارة', 'دليل المستخدم', 'تقرير الاختبار'],
+      zh: ['数据库结构', '后端 API', '管理界面', '用户指南', '测试报告'],
+    },
+    example: {
+      en: 'A trading company wants one screen to see today’s sales, current stock and unpaid invoices instead of three different files.',
+      ar: 'تريد شركة تجارية شاشة واحدة تعرض مبيعات اليوم والمخزون الحالي والفواتير غير المدفوعة بدل ثلاثة ملفات مختلفة.',
+      zh: '一家贸易公司希望用一个页面查看今日销售、当前库存和未付款发票，而不是三个不同文件。',
+    },
+  },
+  {
+    slug: 'automation',
+    icon: 'bolt',
+    tech: ['Python', 'Pandas', 'OpenPyXL', 'SQL', 'APIs'],
+    title: {
+      en: 'Python Automation & Data Processing',
+      ar: 'أتمتة Python ومعالجة البيانات',
+      zh: 'Python 自动化与数据处理',
+    },
+    summary: {
+      en: 'Scripts and small tools that clean data, merge Excel files, generate reports and remove repetitive work.',
+      ar: 'سكربتات وأدوات صغيرة تنظف البيانات وتدمج ملفات Excel وتنشئ التقارير وتلغي العمل المتكرر.',
+      zh: '用脚本和小工具清理数据、合并 Excel、生成报表，减少重复劳动。',
+    },
+    problem: {
+      en: 'Someone copies data between five spreadsheets every week. It is slow, error-prone and nobody wants to own it.',
+      ar: 'شخص ما ينسخ البيانات بين خمسة جداول كل أسبوع. عمل بطيء ومعرض للأخطاء ولا أحد يريد تحمله.',
+      zh: '每周都有人在五张表格之间复制数据，既慢又容易出错，还没人愿意负责。',
+    },
+    solution: {
+      en: 'I turn the manual steps into a tested script with clear inputs, outputs and error messages, then document how to run it.',
+      ar: 'أحوّل الخطوات اليدوية إلى سكربت مُختبر بمدخلات ومخرجات ورسائل خطأ واضحة، ثم أوثّق طريقة تشغيله.',
+      zh: '把手工步骤变成经过测试的脚本，明确输入、输出和报错信息，并写好运行说明。',
+    },
+    features: {
+      en: [
+        'Excel and CSV cleaning, merging and formatting',
+        'Scheduled report generation',
+        'API integrations between systems',
+        'Validation rules and error logs',
+        'Simple CLI or small internal dashboard',
+      ],
+      ar: [
+        'تنظيف ودمج وتنسيق Excel وCSV',
+        'توليد التقارير بشكل مجدول',
+        'ربط الأنظمة عبر واجهات API',
+        'قواعد تحقق وسجلات أخطاء',
+        'واجهة سطر أوامر بسيطة أو لوحة داخلية صغيرة',
+      ],
+      zh: [
+        'Excel 和 CSV 的清洗、合并与格式化',
+        '定时生成报表',
+        '通过 API 打通不同系统',
+        '校验规则与错误日志',
+        '简单命令行工具或小型内部面板',
+      ],
+    },
+    deliverables: {
+      en: ['Working script', 'Sample input files', 'README', 'Tests', 'One training session'],
+      ar: ['سكربت يعمل', 'ملفات إدخال تجريبية', 'ملف README', 'اختبارات', 'جلسة تدريب واحدة'],
+      zh: ['可运行脚本', '示例输入文件', 'README', '测试', '一次培训'],
+    },
+    example: {
+      en: 'A logistics team receives 20 Excel sheets monthly and needs one clean report with totals and exceptions.',
+      ar: 'يتلقى فريق لوجستي 20 ملف Excel شهرياً ويحتاج تقريراً واحداً نظيفاً بالإجماليات والاستثناءات.',
+      zh: '一个物流团队每月收到 20 份 Excel，需要一份包含汇总和异常项的干净报表。',
+    },
+  },
+];
+
+export interface Project {
+  slug: string;
+  category: ServiceSlug;
+  tag: Localized<string>;
+  title: Localized<string>;
+  summary: Localized<string>;
+  challenge: Localized<string>;
+  approach: Localized<string>;
+  result: Localized<string>;
+  role: Localized<string>;
+  stack: string[];
+  accent: 'mint' | 'blue' | 'amber' | 'orange';
+  image: string;
+  demoUrl?: string;
+}
+
+export const projects: Project[] = [
+  {
+    slug: 'sana-coffee-website',
+    category: 'website',
+    accent: 'orange',
+    image: asset('projects/sana-coffee-website.svg'),
+    demoUrl: '/demos/website',
+    tag: { en: 'Website', ar: 'موقع', zh: '网站' },
+    title: { en: 'SANA COFFEE Website', ar: 'موقع قهوة صنعاء', zh: 'SANA COFFEE 网站' },
+    summary: {
+      en: 'A working bilingual website for a Yemeni coffee brand: product pages, ordering and a form that saves real requests.',
+      ar: 'موقع ثنائي اللغة يعمل لعلامة قهوة يمنية: صفحات منتجات وطلبات ونموذج يحفظ الطلبات فعلياً.',
+      zh: '为也门咖啡品牌打造的可运行双语网站：产品页、下单流程和真正保存请求的表单。',
+    },
+    challenge: {
+      en: 'The brand needed to present four products in Arabic and English and collect orders without a backend at launch.',
+      ar: 'احتاجت العلامة إلى عرض أربعة منتجات بالعربية والإنجليزية وجمع الطلبات بدون خادم عند الإطلاق.',
+      zh: '品牌需要用阿拉伯语和英语展示四款产品，并在上线初期无需后端即可收集订单。',
+    },
+    approach: {
+      en: 'I built a dedicated light-theme site with its own navigation, product cards, language-aware content and a localStorage-backed order form.',
+      ar: 'بنيت موقعاً مستقلاً بتصميم فاتح وتنقل خاص وبطاقات منتجات ومحتوى حسب اللغة ونموذج طلب يحفظ في المتصفح.',
+      zh: '我构建了独立的浅色主题网站，带专属导航、产品卡片、按语言切换的内容，以及基于 localStorage 的订单表单。',
+    },
+    result: {
+      en: 'Visitors can browse the menu, choose a product and submit an order that is stored and counted in the preview.',
+      ar: 'يمكن للزائر تصفح القائمة واختيار منتج وإرسال طلب مُخزّن ومعدود داخل المعاينة.',
+      zh: '访客可以浏览菜单、选择产品并提交订单，订单会在预览中保存并计数。',
+    },
+    role: { en: 'Design & development', ar: 'التصميم والتطوير', zh: '设计与开发' },
+    stack: ['React', 'TypeScript', 'Vite', 'CSS', 'localStorage'],
+  },
+  {
+    slug: 'management-os',
+    category: 'systems',
+    accent: 'blue',
+    image: asset('projects/management-os.svg'),
+    demoUrl: '/demos/system',
+    tag: { en: 'Management system', ar: 'نظام إدارة', zh: '管理系统' },
+    title: { en: 'EHAB Management OS', ar: 'نظام EHAB للإدارة', zh: 'EHAB 管理系统' },
+    summary: {
+      en: 'A working SaaS-style dashboard: customers, orders, stock, KPIs, reports, access roles and real CSV export.',
+      ar: 'لوحة SaaS تعمل فعلاً: عملاء، طلبات، مخزون، مؤشرات، تقارير، صلاحيات، وتصدير CSV حقيقي.',
+      zh: '可运行的 SaaS 风格后台：客户、订单、库存、指标、报表、权限和真实 CSV 导出。',
+    },
+    challenge: {
+      en: 'A client needed one screen to see revenue, orders and stock, with the ability to add data and export a report — without a backend in the first release.',
+      ar: 'احتاج العميل شاشة واحدة تظهر الإيرادات والطلبات والمخزون، مع إضافة البيانات وتصدير تقرير — بدون خادم في الإصدار الأول.',
+      zh: '客户需要一个页面查看收入、订单和库存，并能添加数据和导出报表——首版无需后端。',
+    },
+    approach: {
+      en: 'I designed a normalized data model, role-based navigation, live KPI calculations, status-driven stock updates and a persistent browser store.',
+      ar: 'صممت نموذج بيانات منظّماً وتنقلاً بالصلاحيات ومؤشرات محسوبة لحظياً وتحديث مخزون مرتبط بحالة الطلب وتخزيناً محلياً دائماً.',
+      zh: '设计规范数据模型、按权限导航、实时计算指标、随订单状态更新库存，并使用持久化本地存储。',
+    },
+    result: {
+      en: 'Every action is saved and survives reload. Changing an order to cancelled restores stock; exporting produces a real CSV file.',
+      ar: 'كل إجراء يُحفظ ويبقى بعد إعادة التحميل. إلغاء الطلب يُعيد الكمية للمخزون، والتصدير يُنتج ملف CSV حقيقياً.',
+      zh: '所有操作都会保存并在刷新后保留。取消订单会回补库存，导出会生成真实 CSV 文件。',
+    },
+    role: { en: 'Product design & development', ar: 'تصميم المنتج والتطوير', zh: '产品设计与开发' },
+    stack: ['React', 'TypeScript', 'SVG Charts', 'localStorage', 'CSV'],
+  },
+  {
+    slug: 'automation-pipeline',
+    category: 'automation',
+    accent: 'amber',
+    image: asset('projects/automation-pipeline.svg'),
+    demoUrl: '/demos/automation',
+    tag: { en: 'Automation', ar: 'أتمتة', zh: '自动化' },
+    title: { en: 'EHAB Data Pipeline', ar: 'مسار EHAB لمعالجة البيانات', zh: 'EHAB 数据管道' },
+    summary: {
+      en: 'A dependency-free Python pipeline that turns messy branch CSV exports into clean data, anomaly reports and an executive summary.',
+      ar: 'مسار Python بدون مكتبات خارجية يحوّل ملفات CSV فوضوية من الفروع إلى بيانات نظيفة وتقرير شذوذ وملخص تنفيذي.',
+      zh: '一条零依赖 Python 数据管道，把混乱的分公司 CSV 变成干净数据、异常报告和执行摘要。',
+    },
+    challenge: {
+      en: 'Branch files used different dates, Arabic digits, currency symbols, duplicates and invalid rows — making manual reporting slow and error-prone.',
+      ar: 'كانت ملفات الفروع تستخدم تواريخ وأرقاماً عربية ورموز عملات وتكرارات وصفوفاً خاطئة، مما يجعل التقرير اليدوي بطيئاً وعرضة للخطأ.',
+      zh: '各分公司文件使用不同日期、阿拉伯数字、货币符号、重复和无效行，导致手工报表缓慢且易错。',
+    },
+    approach: {
+      en: 'I built a stdlib-only CLI tool with validation, digit/date normalisation, duplicate detection, anomaly flagging and unit tests, then exposed it through an interactive web showcase.',
+      ar: 'بنيت أداة أوامر بـ Python الخالص مع تحقق وتوحيد الأرقام والتواريخ وكشف التكرار والشذوذ واختبارات وحدة، ثم عرضتها في صفحة ويب تفاعلية.',
+      zh: '我构建了一个仅用标准库的命令行工具，包含校验、数字/日期规范化、重复检测、异常标记和单元测试，并通过交互式网页展示。',
+    },
+    result: {
+      en: '15 raw rows became 8 clean rows and 7 flagged rows with reasons. Revenue, averages, top product and top branch are generated automatically in JSON and Markdown.',
+      ar: 'أصبحت 15 صفاً خاماً 8 صفوف نظيفة و7 صفوف مستبعدة مع أسبابها. الإيرادات والمتوسطات وأفضل منتج وفرع تُولَّد تلقائياً بصيغتي JSON وMarkdown.',
+      zh: '15 行原始数据变成 8 行干净数据和 7 行带原因的异常数据。收入、均值、最佳产品和分公司会自动生成 JSON 与 Markdown 报告。',
+    },
+    role: { en: 'Automation & data engineering', ar: 'الأتمتة وهندسة البيانات', zh: '自动化与数据工程' },
+    stack: ['Python 3', 'stdlib only', 'CSV', 'JSON', 'unittest'],
+  },
+];
+
+export interface Plan {
+  id: string;
+  price: Localized<string>;
+  title: Localized<string>;
+  description: Localized<string>;
+  features: Localized<string[]>;
+  featured?: boolean;
+}
+
+export const plans: Plan[] = [
+  {
+    id: 'starter',
+    price: { en: '$300 – $800', ar: '٣٠٠ – ٨٠٠ دولار', zh: '$300 – $800' },
+    title: { en: 'Business Website', ar: 'موقع أعمال', zh: '企业网站' },
+    description: {
+      en: 'A focused 3–5 page site for a service business that needs to look credible and collect inquiries.',
+      ar: 'موقع من ٣ إلى ٥ صفحات لشركة خدمات تحتاج مظهراً موثوقاً وجمع طلبات التواصل.',
+      zh: '面向服务型企业的 3–5 页网站，建立可信形象并收集咨询。',
+    },
+    features: {
+      en: ['Responsive design', 'Up to 5 pages', 'One language (more on request)', 'Contact form', 'Deployment support'],
+      ar: ['تصميم متجاوب', 'حتى ٥ صفحات', 'لغة واحدة (المزيد عند الطلب)', 'نموذج تواصل', 'دعم النشر'],
+      zh: ['响应式设计', '最多 5 个页面', '一种语言（可增加）', '联系表单', '部署支持'],
+    },
+  },
+  {
+    id: 'growth',
+    price: { en: 'From $1,200', ar: 'من ١٢٠٠ دولار', zh: '起价 $1,200' },
+    title: { en: 'Management System', ar: 'نظام إدارة', zh: '管理系统' },
+    description: {
+      en: 'A custom internal system for customers, orders, stock and reports with role-based access.',
+      ar: 'نظام داخلي مخصص للعملاء والطلبات والمخزون والتقارير مع صلاحيات المستخدمين.',
+      zh: '定制内部系统，管理客户、订单、库存和报表，并带权限控制。',
+    },
+    features: {
+      en: ['Database design', 'Laravel REST API', 'Admin interface', 'Role-based access', 'Basic reporting'],
+      ar: ['تصميم قاعدة البيانات', 'Laravel REST API', 'لوحة إدارة', 'صلاحيات المستخدمين', 'تقارير أساسية'],
+      zh: ['数据库设计', 'Laravel REST API', '管理界面', '权限控制', '基础报表'],
+    },
+    featured: true,
+  },
+  {
+    id: 'automation',
+    price: { en: 'From $200', ar: 'من ٢٠٠ دولار', zh: '起价 $200' },
+    title: { en: 'Automation Sprint', ar: 'سبرنت أتمتة', zh: '自动化快速任务' },
+    description: {
+      en: 'A small, well-defined Python task such as cleaning files or generating a recurring report.',
+      ar: 'مهمة Python صغيرة وواضحة مثل تنظيف الملفات أو توليد تقرير متكرر.',
+      zh: '范围明确的小型 Python 任务，例如清理文件或生成周期性报表。',
+    },
+    features: {
+      en: ['Scope in 1 page', 'Working script', 'Sample data', 'README + tests', 'One revision round'],
+      ar: ['نطاق من صفحة واحدة', 'سكربت يعمل', 'بيانات تجريبية', 'README واختبارات', 'جولة تعديل واحدة'],
+      zh: ['一页范围说明', '可运行脚本', '示例数据', 'README 和测试', '一轮修改'],
+    },
+  },
+];
+
+export interface ProcessStep {
+  n: string;
+  title: Localized<string>;
+  description: Localized<string>;
+  output: Localized<string>;
+}
+
+export const processSteps: ProcessStep[] = [
+  {
+    n: '01',
+    title: { en: 'Discovery call', ar: 'مكالمة اكتشاف', zh: '需求沟通' },
+    description: {
+      en: 'We talk about your business, the problem and what a successful result looks like.',
+      ar: 'نتحدث عن عملك والمشكلة وكيف تبدو النتيجة الناجحة.',
+      zh: '讨论你的业务、问题和期望的成功结果。',
+    },
+    output: { en: 'Clear goal', ar: 'هدف واضح', zh: '明确目标' },
+  },
+  {
+    n: '02',
+    title: { en: 'Scope & quote', ar: 'النطاق والعرض', zh: '范围与报价' },
+    description: {
+      en: 'I write the deliverables, timeline and price in one short document for your approval.',
+      ar: 'أكتب المخرجات والجدول الزمني والسعر في مستند قصير لموافقتك.',
+      zh: '把交付物、时间和价格写进一份简短文档供你确认。',
+    },
+    output: { en: 'Signed scope', ar: 'نطاق معتمد', zh: '确认的范围' },
+  },
+  {
+    n: '03',
+    title: { en: 'Design & model', ar: 'التصميم ونمذجة البيانات', zh: '设计与建模' },
+    description: {
+      en: 'I prepare screens, content structure and, for systems, the database model.',
+      ar: 'أجهّز الشاشات وهيكل المحتوى، وللأنظمة مخطط قاعدة البيانات.',
+      zh: '准备界面、内容结构；系统类项目还会准备数据库模型。',
+    },
+    output: { en: 'Approved draft', ar: 'مسودة معتمدة', zh: '确认的草稿' },
+  },
+  {
+    n: '04',
+    title: { en: 'Build & test', ar: 'التطوير والاختبار', zh: '开发与测试' },
+    description: {
+      en: 'I build the product in short cycles and show you a working version regularly.',
+      ar: 'أبني المنتج في دورات قصيرة وأعرض عليك نسخة تعمل بشكل دوري.',
+      zh: '按短周期开发，并定期给你看可运行的版本。',
+    },
+    output: { en: 'Working build', ar: 'نسخة تعمل', zh: '可运行版本' },
+  },
+  {
+    n: '05',
+    title: { en: 'Review & refine', ar: 'المراجعة والتحسين', zh: '评审与完善' },
+    description: {
+      en: 'You test it, send feedback, and I fix the things that matter before launch.',
+      ar: 'تختبره وترسل ملاحظاتك، وأصلح ما يهم قبل الإطلاق.',
+      zh: '你测试并反馈，我在上线前修复重要问题。',
+    },
+    output: { en: 'Final version', ar: 'النسخة النهائية', zh: '最终版本' },
+  },
+  {
+    n: '06',
+    title: { en: 'Launch & handover', ar: 'الإطلاق والتسليم', zh: '上线与交接' },
+    description: {
+      en: 'I deploy the project, document how to use it and stay available for the first questions.',
+      ar: 'أنشر المشروع، أوثّق طريقة استخدامه، وأبقى متاحاً للأسئلة الأولى.',
+      zh: '部署项目、写好使用说明，并在初期继续答疑。',
+    },
+    output: { en: 'Live project + docs', ar: 'مشروع حي ووثائق', zh: '上线项目 + 文档' },
+  },
+];
+
+export const values: { icon: IconName; title: Localized<string>; description: Localized<string> }[] = [
+  {
+    icon: 'user',
+    title: { en: 'Direct communication', ar: 'تواصل مباشر', zh: '直接沟通' },
+    description: {
+      en: 'You talk to the developer, not a salesperson who repeats your request to someone else.',
+      ar: 'تتحدث مع المطور مباشرة، لا مع موظف مبيعات ينقل طلبك لشخص آخر.',
+      zh: '你直接和开发者沟通，而不是和转述需求销售人员沟通。',
+    },
+  },
+  {
+    icon: 'target',
+    title: { en: 'Clear scope', ar: 'نطاق واضح', zh: '范围清晰' },
+    description: {
+      en: 'You approve what will be built, how long it takes and what it costs before work starts.',
+      ar: 'توافق على ما سيُبنى ومدته وتكلفته قبل بدء العمل.',
+      zh: '开工前先确认要做什么、多久、多少钱。',
+    },
+  },
+  {
+    icon: 'shield',
+    title: { en: 'Honest positioning', ar: 'مصداقية في العرض', zh: '诚实定位' },
+    description: {
+      en: 'EHAB TECH is one independent developer, not a fake agency with a fictional team.',
+      ar: 'EHAB TECH مطور مستقل واحد، لا وكالة وهمية بفريق متخيّل.',
+      zh: 'EHAB TECH 是一位独立开发者，不是虚构团队的代理商。',
+    },
+  },
+  {
+    icon: 'globe',
+    title: { en: 'Multilingual ready', ar: 'جاهز للتعدد اللغوي', zh: '多语言就绪' },
+    description: {
+      en: 'English, Arabic and Chinese are built into the site, not added as an afterthought.',
+      ar: 'الإنجليزية والعربية والصينية مدمجة في الموقع منذ البداية، ليست إضافة لاحقة.',
+      zh: '英语、阿拉伯语和中文从一开始就内建，而不是事后补上。',
+    },
+  },
+];
+
+export const faqs: { q: Localized<string>; a: Localized<string> }[] = [
+  {
+    q: { en: 'Do you work with clients in China?', ar: 'هل تعمل مع عملاء في الصين؟', zh: '你和中国客户合作吗？' },
+    a: {
+      en: 'Yes. I work remotely and can communicate in English and Chinese, with Arabic as my native language.',
+      ar: 'نعم. أعمل عن بُعد، ويمكنني التواصل بالإنجليزية والصينية، والعربية لغتي الأم.',
+      zh: '可以。我远程工作，能用英语和中文沟通，阿拉伯语是我的母语。',
+    },
+  },
+  {
+    q: { en: 'What do you need to start?', ar: 'ما الذي تحتاجه للبدء؟', zh: '开始需要你提供什么？' },
+    a: {
+      en: 'A short description of your business, the problem to solve, a rough budget and your preferred timeline.',
+      ar: 'وصف مختصر لعملك، والمشكلة المطلوب حلها، وميزانية تقريبية، والجدول الزمني المفضل.',
+      zh: '简短的业务介绍、要解决的问题、大致预算和期望时间。',
+    },
+  },
+  {
+    q: { en: 'Do you use AI-generated templates?', ar: 'هل تستخدم قوالب مولّدة بالذكاء الاصطناعي؟', zh: '你会使用 AI 生成的模板吗？' },
+    a: {
+      en: 'I may use tools to speed up drafting, but every project is reviewed, adapted and tested by me before delivery.',
+      ar: 'قد أستخدم أدوات لتسريع المسودة، لكن كل مشروع أراجعه وأكيّفه وأختبره قبل التسليم.',
+      zh: '我可能会用工具加速草稿，但每个项目在交付前都由我审查、调整和测试。',
+    },
+  },
+  {
+    q: { en: 'Can you maintain the project after launch?', ar: 'هل يمكنك صيانة المشروع بعد الإطلاق؟', zh: '上线后你能维护项目吗？' },
+    a: {
+      en: 'Yes. We can agree on a small monthly support retainer, or you can take full ownership with the handover docs.',
+      ar: 'نعم. يمكننا الاتفاق على اشتراك دعم شهري بسيط، أو تستلم المشروع بالكامل مع وثائق التسليم.',
+      zh: '可以。我们可以约定小额月度维护，或者通过交接文档由你完全接手。',
+    },
+  },
+  {
+    q: { en: 'Is payment required upfront?', ar: 'هل مطلوب دفع مقدم؟', zh: '需要预付吗？' },
+    a: {
+      en: 'Usually we agree on milestones. A first payment starts the work, and the rest is tied to agreed deliverables.',
+      ar: 'عادة نتفق على مراحل. الدفعة الأولى تبدأ العمل، والباقي مرتبط بالمخرجات المتفق عليها.',
+      zh: '通常按里程碑付款。首付款启动工作，其余与约定的交付物挂钩。',
+    },
+  },
+];

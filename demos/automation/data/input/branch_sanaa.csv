@@ -1,0 +1,6 @@
+branch,date,customer,product,qty,amount
+Sana'a,2026-01-05,Al-Nour Trading,Website,1,1200.00
+Sana'a,2026-01-06,Li Wei,CRM System,2,3000
+Sana'a,05/01/2026,Al-Nour Trading,Website,1,1200.00
+Sana'a,2026-01-08,Broken Row,Website,,ABC
+Sana'a,2026-01-09,Mona Al-Otaibi,Automation Sprint,3,"١٬٥٠٠"
